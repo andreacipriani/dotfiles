@@ -42,6 +42,10 @@ defaults, and so on. Tweak this script, and occasionally run `dot` from
 time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
 
+## Manual steps (to be automatized)
+- Load `iTerm` preferences.
+
+
 ## thanks
 
 I forked [Ryan Bates](http://github.com/ryanb)' excellent
