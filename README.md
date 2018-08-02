@@ -43,7 +43,9 @@ time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
 
 ## Manual steps (to be automatized)
-- Load `iTerm` preferences.
+- Load `iTerm` preferences: 
+
+![load iTerm preferences](/documentation/img/iterm-preferences.png)
 
 
 ## thanks
