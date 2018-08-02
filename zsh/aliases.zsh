@@ -1,6 +1,5 @@
 alias reload!='. ~/.zshrc'
-alias cls='clear' # Good 'ol Clear Screen command
-alias l='ls -la'
+alias clr='clear' # Good 'ol Clear Screen command
 alias b='cd "$OLDPWD"'
 alias r='ranger'
 alias grep='grep -in --color'
