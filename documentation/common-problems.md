@@ -1,2 +1,4 @@
-compinit: insecure directories
-Run: ```compaudit | xargs chmod go-w```
+### List of the problems I had with my .dotfiles
+
+- `compinit: insecure directories`
+  - Solution: run `compaudit | xargs chmod go-w`
