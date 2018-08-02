@@ -21,7 +21,9 @@ There's a few special files in the hierarchy.
 
 ## install
 
-Run this:
+Make sure you have installed [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+Then, run:
 
 ```sh
 git clone git@github.com:andreacipriani/dotfiles.git ~/.dotfiles
