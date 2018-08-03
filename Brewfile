@@ -20,6 +20,7 @@ brew 'roundup'
 brew 'spaceman-diff'
 brew 'unrar'
 brew 'wget'
+brew 'fzf'
 
 cask 'adium'
 cask 'atom'
