@@ -29,7 +29,6 @@ git_dirty() {
 
 git_prompt_info () {
  ref=$($git symbolic-ref HEAD 2>/dev/null) || return
-# echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
  echo "${ref#refs/heads/}"
 }
 
@@ -52,13 +51,6 @@ need_push () {
 
 directory_name() {
   echo "%{$fg_bold[cyan]%}%0/%\/%{$reset_color%}"
-}
-
-battery_status() {
-  if [[ $(sysctl -n hw.model) == *"Book"* ]]
-  then
-    $ZSH/bin/battery-status
-  fi
 }
 
 export PROMPT=$'\n$(directory_name) $(git_dirty)$(need_push)\n› '

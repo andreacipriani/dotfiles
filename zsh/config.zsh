@@ -33,9 +33,8 @@ setopt HIST_REDUCE_BLANKS
 
 #Plugins - must install them in ~/.dotflies/custom/plugins
 plugins=(
-  git
   alias-tips
-  rbenv
+  sudo
   ruby
 )
 
