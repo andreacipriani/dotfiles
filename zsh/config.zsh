@@ -31,6 +31,14 @@ setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share 
 setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
 setopt HIST_REDUCE_BLANKS
 
+#Plugins - must install them in ~/.dotflies/custom/plugins
+plugins=(
+  git
+  alias-tips
+  rbenv
+  ruby
+)
+
 # .[TAB] will complete to ../
 zstyle ':completion:*' special-dirs true
 
