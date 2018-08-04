@@ -5,6 +5,10 @@ fpath=($ZSH/functions $fpath)
 
 autoload -U $ZSH/functions/*(:t)
 
+HYPHEN_INSENSITIVE="true"
+export UPDATE_ZSH_DAYS=3
+export LANG=en_US.UTF-8
+
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
