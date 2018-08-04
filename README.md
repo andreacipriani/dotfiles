@@ -43,4 +43,4 @@ time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
 
 ## Manual steps (to be automatized)
-- 
+- Load iterm colors ![iterm colors](documentation/img/iterm-load-colors.png)
