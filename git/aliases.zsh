@@ -7,6 +7,7 @@ then
 fi
 
 # Git aliases
+alias gpm="git push origin master"
 alias gpr='git pull --rebase'
 alias gst="git status -sb"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
