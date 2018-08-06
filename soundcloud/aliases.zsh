@@ -1,0 +1,1 @@
+alias goios="cd ~/Code/soundcloud/ios/"
