@@ -1,4 +1,4 @@
-### List of apps:
+### List of apps that I use:
 
 - [sqlitebrowser](http://sqlitebrowser.org/)
 - [simsim](https://github.com/dsmelov/simsim)
