@@ -22,6 +22,27 @@ brew 'unrar'
 brew 'wget'
 brew 'fzf'
 brew 'tig'
+brew `clang-format`
+brew `mergepbx`
+brew `scala`
+brew `swiftlint`
+brew `sqlite`
+brew `sbt`
+brew `xctool`
+brew `xcrecord`
+brew `tree`
+brew `protobuf`
+brew `mongodb`
+brew `mysql`
+brew `heroku`
+brew `heroku-node`
+brew `hub`
+brew `git-lfs`
+brew `postgresql`
+brew `python`
+brew `python3`
+brew `node`
+brew `ranger`
 
 cask 'adium'
 cask 'atom'
