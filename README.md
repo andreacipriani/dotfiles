@@ -44,3 +44,8 @@ this script in `bin/`.
 
 ## Manual steps (to be automatized)
 - Load iterm colors ![iterm colors](documentation/img/iterm-load-colors.png)
+
+## Things to backup
+- Xcode UserData folder
+- Alfred preferences
+- iTerm preferences
