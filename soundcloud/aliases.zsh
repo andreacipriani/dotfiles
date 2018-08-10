@@ -1,1 +1,1 @@
-alias goios="cd ~/Code/soundcloud/ios/"
+alias goios="cd ~/Code/soundcloud/ios"
