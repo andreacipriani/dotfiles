@@ -1,33 +1,43 @@
-### List of apps that I use:
+# List of apps that I use:
 
+
+### Coding tools
 - [sqlitebrowser](http://sqlitebrowser.org/)
 - [simsim](https://github.com/dsmelov/simsim)
-- telegram
-- whatsapp
-- alfred 3
-- automator
 - ccmenu
 - charles
 - dash
-- dropbox
 - docker
-- evernote
-- gimp
-- firefox
-- giphy capture
-- chrome
-- grammarly
 - iterm
+- postgres
+- sourcetree
+- virtualbox
+- tomato one
+
+### IDEs / Editors
 - intellij
 - macdown
-- overkill
-- postgres
-- slack
-- skype
-- sourcetree
-- teamviewwer
 - texstudio
-- vlc
-- virtualbox
+
+### IM
+- telegram
+- whatsapp
+- skype
+- slack
+
+### Productivity
+- alfred 3
 - trello
-- tomato one
+- automator
+- dropbox
+- evernote
+- giphy capture
+- grammarly
+- overkill
+- teamviewwer
+
+#Design
+- gimp
+
+#Video
+- vlc
