@@ -21,6 +21,7 @@ brew 'spaceman-diff'
 brew 'unrar'
 brew 'wget'
 brew 'fzf'
+brew 'tig'
 
 cask 'adium'
 cask 'atom'
