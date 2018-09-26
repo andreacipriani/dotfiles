@@ -70,3 +70,7 @@ bindkey '^[[5D' beginning-of-line
 bindkey '^[[5C' end-of-line
 bindkey '^[[3~' delete-char
 bindkey '^?' backward-delete-char
+
+# Export gems
+export GEM_HOME=~/.gem
+export GEM_PATH=~/.gem3
