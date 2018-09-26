@@ -43,6 +43,7 @@ brew `python`
 brew `python3`
 brew `node`
 brew `ranger`
+brew `the_silver_searcher`
 
 cask 'adium'
 cask 'atom'
