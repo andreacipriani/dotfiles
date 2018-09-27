@@ -32,3 +32,5 @@ alias gcpc="gitc cherry-pick --continue"
 alias gcm="git commit -m"
 # Remove `+` and `-` from start of diff lines; just rely upon color.
 alias gd='git diff --color | sed "s/^\([^-+ ]*\)[-+ ]/\\1/" | less -r'
+
+alias scformatpush="sc-format && git add . && git commit --amend --no-edit && git push"
