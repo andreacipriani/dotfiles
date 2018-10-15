@@ -28,3 +28,6 @@ defaults write com.apple.finder AppleShowAllFiles YES
 
 # Enable press-and-hold for special characters
 defaults write -g ApplePressAndHoldEnabled -bool true
+
+# Show build time in Xcode
+defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
