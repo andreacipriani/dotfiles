@@ -3,7 +3,7 @@
 # ss -  open files with subl after fuzzy search
 
 shelp() {
-    echo "□ shome - search from home\n□ ss - subl\n□ scd - change dir \n□ scdh - change dir from home\n□ shr - history\n□ sbr - branches"
+    echo "□ shome - search from home\n□ ss - subl\n□ scd - change dir \n□ scdh - change dir from home\n□ shr - history\n□ sbr - brancheshistory\n□ spath - show path"
 }
 
 #Search from home
@@ -50,4 +50,12 @@ sbr() {
   branch=$(echo "$branches" |
            fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+}
+
+# spwd - fuzzy search and show path
+
+spath() {
+  local files
+  IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
+  [[ -n "$files" ]] && ${realpath} "${files[@]}"
 }
