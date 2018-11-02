@@ -1,5 +1,6 @@
 # Local/private config goes in the include
 [include]
+#TODO: change local gitconfig based on folder Work/Personal
         path = ~/.gitconfig.local
 [hub]
         protocol = https
@@ -15,7 +16,6 @@
         branch = auto
         ui = true
 [core]
-	excludesfile = /Users/andreacipriani/.gitignore
 	editor = subl -n -w
 [apply]
         whitespace = nowarn
@@ -25,23 +25,17 @@
         prompt = false
 [help]
         autocorrect = 1
-[push]
-        # See `git help config` (search for push.default)
-        # for more information on different options of the below setting.
-        #
-        # Setting to git 2.0 default to suppress warning message
-        default = simple
 [pull]
 	rebase = true
 [rebase]
 	autoStash = true
 [rerere]
 	enabled = true
-[difftool "sourcetree"]
+[difftool "opendiff"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+[mergetool "opendiff"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
@@ -51,5 +45,3 @@
 [user]
 	name = Andrea Cipriani
 	email = andrea.cipriani@soundcloud.com
-[commit]
-	template = /Users/andreacipriani/.stCommitMsg
