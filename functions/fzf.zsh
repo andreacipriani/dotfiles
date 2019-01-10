@@ -40,7 +40,10 @@ scdh() {
 
 # shr - search in history
 shr() {
-  eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf-tmux +s --tac | sed 's/ *[0-9]* *//')
+  local cmd
+  cmd=$( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf-tmux +s --tac | sed 's/ *[0-9]* *//')
+  echo "copyied command: $cmd"
+  echo "$cmd" | pbcopy
 }
 
 # sbr - checkout git branch (including remote branches), sorted by most recent commit, limit 30 last branches
@@ -57,5 +60,8 @@ sbr() {
 spath() {
   local files
   IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
-  [[ -n "$files" ]] && ${realpath} "${files[@]}"
+  # [[ -n "$files" ]] && ${realpath} "${files[@]}"\
+  echo ${files[@]}
+  echo ${files[@]} | pbcopy
+  echo "copyied path: ${files[@]}"
 }
