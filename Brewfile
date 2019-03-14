@@ -47,6 +47,7 @@ brew `the_silver_searcher`
 brew `tcdump`
 brew `knife`
 brew `aws`
+brew `jenv`
 
 cask 'adium'
 cask 'atom'
