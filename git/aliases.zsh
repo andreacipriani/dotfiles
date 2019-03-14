@@ -34,4 +34,4 @@ alias gcm="git commit -m"
 alias gd='git diff --color | sed "s/^\([^-+ ]*\)[-+ ]/\\1/" | less -r'
 alias gfix="git diff --name-only | uniq | xargs git mergetool"
 alias scformatpush="sc-format && git add . && git commit --amend --no-edit && git push"
-alias gshipit="sc-format && git add . && git commit --amend --no-edit && git push -f"
+alias gshipit="sc-format && git add . && git commit --amend --no-edit && gp -f"
