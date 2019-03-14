@@ -44,6 +44,9 @@ brew `python3`
 brew `node`
 brew `ranger`
 brew `the_silver_searcher`
+brew `tcdump`
+brew `knife`
+brew `aws`
 
 cask 'adium'
 cask 'atom'
