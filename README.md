@@ -19,10 +19,15 @@ There's a few special files in the hierarchy.
   but still keep those autoloaded files in your home directory. These get
   symlinked in when you run `script/bootstrap`.
 
-## install
+## Prerequisites
 
-- Make sure you have installed [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+- Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - Install brew `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+- Install iTerm
+- Install Java https://java.com/en/download/mac_download.jsp
+
+## Installation
+
 - Run `brew install clang-format`
 - `git clone git@github.com:andreacipriani/dotfiles.git ~/.dotfiles`
 - `cd ~/.dotfiles`
