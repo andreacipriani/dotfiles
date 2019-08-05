@@ -32,6 +32,8 @@ There's a few special files in the hierarchy.
 - `git clone git@github.com:andreacipriani/dotfiles.git ~/.dotfiles`
 - `cd ~/.dotfiles`
 - `script/bootstrap`
+- `script/brew-install`
+- `script/install`
 - `/bin/dot`
 
 ## Manual steps
