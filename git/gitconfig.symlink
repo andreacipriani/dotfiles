@@ -17,7 +17,7 @@
         ui = true
 [core]
         excludesfile = /Users/andreacipriani/.gitignore
-	editor = subl -n -w
+	editor = code -n -w
 [apply]
         whitespace = nowarn
 [mergetool]
