@@ -1,1 +1,1 @@
-cp -R UserData ~/Library/Developer/Xcode/
+cp -R ~/.dotfiles/xcode/UserData ~/Library/Developer/Xcode/
