@@ -1,9 +1,9 @@
 # fzf custom functions, inspired by https://github.com/junegunn/fzf#fuzzy-completion-for-bash-and-zsh https://github.com/junegunn/fzf/wiki/examples
 
-# ss -  open files with subl after fuzzy search
+# ss -  open files with your favourite editor after fuzzy search
 
 shelp() {
-    echo "□ shome - search from home\n□ ss - subl\n□ scd - change dir \n□ scdh - change dir from home\n□ shr - history\n□ sbr - brancheshistory\n□ spath - show path"
+    echo "□ shome - search from home\n□ ss - open in editor\n□ scd - change dir \n□ scdh - change dir from home\n□ shr - history\n□ sbr - brancheshistory\n□ spath - show path"
 }
 
 #Search from home
@@ -14,11 +14,11 @@ shome() {
   cd $currentDir
 }
 
-# ss - fuzzy search and open with sublime
+# ss - fuzzy search and open with editor
 ss() {
   local files
   IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
-  [[ -n "$files" ]] && ${EDITOR:-subl} "${files[@]}"
+  [[ -n "$files" ]] && ${EDITOR:-$EDITOR} "${files[@]}"
 }
 
 # scd - fuzzy cd into directories

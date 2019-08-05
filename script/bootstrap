@@ -154,3 +154,5 @@ fi
 
 echo ''
 echo '  All installed!'
+echo '  Giving right permissions to dotfiles:'
+sudo chmod -R 755 ~/.dotfiles
