@@ -22,31 +22,20 @@ There's a few special files in the hierarchy.
 ## install
 
 - Make sure you have installed [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-- Install brew
+- Install brew `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 - Run `brew install clang-format`
-```sh
-git clone git@github.com:andreacipriani/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-script/bootstrap
-```
+- `git clone git@github.com:andreacipriani/dotfiles.git ~/.dotfiles`
+- `cd ~/.dotfiles`
+- `script/bootstrap`
+- `/bin/dot`
 
-This will symlink the appropriate files in `.dotfiles` to your home directory.
-Everything is configured and tweaked within `~/.dotfiles`.
+## Manual steps
 
-The main file you'll want to change right off the bat is `zsh/zshrc.symlink`,
-which sets up a few paths that'll be different on your particular machine.
-
-- run `/bin/dot`
-`dot` is a simple script that installs some dependencies, sets sane macOS
-defaults, and so on. Tweak this script, and occasionally run `dot` from
-time to time to keep your environment fresh and up-to-date. You can find
-this script in `bin/`.
-
-## Manual steps (to be automatized)
 - Load iterm colors ![iterm colors](documentation/img/iterm-load-colors.png) the theme is in `iterm/one-dark996.itermcolors`
 - Load iterm config: On `Profiles` press `Other Actions` and `Import JSON Profiles`, select `iterm/iterm_config.json`
 
 ## Things to backup
+
 - Xcode UserData folder
 - Alfred preferences
 - iTerm preferences
