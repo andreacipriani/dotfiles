@@ -16,7 +16,7 @@
         branch = auto
         ui = true
 [core]
-        excludesfile = /Users/andreacipriani/.gitignore
+	excludesfile = /Users/andreacipriani/.gitignore
 	editor = code -n -w
 [apply]
         whitespace = nowarn
