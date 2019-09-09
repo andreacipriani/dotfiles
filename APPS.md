@@ -1,6 +1,5 @@
 # List of apps that I use:
 
-
 ### Coding tools
 - [sqlitebrowser](http://sqlitebrowser.org/)
 - [simsim](https://github.com/dsmelov/simsim)
@@ -26,7 +25,7 @@
 - slack
 
 ### Productivity
-- alfred 3
+- alfred
 - trello
 - automator
 - dropbox
