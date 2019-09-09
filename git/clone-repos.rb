@@ -13,7 +13,7 @@ class Repository
     def clone
         repo_path = "#{destination_folder}/#{name}"
         if File.directory?(repo_path)
-            puts "Not cloning #{repo_path} because folder  already exists"
+            puts "Not cloning #{repo_path} because folder already exists"
             return
         end
         
@@ -28,7 +28,7 @@ class Repository
 end
 
 ### Work repos
-work_repos = ["ios", "android-listeners", "system", "shibboleth", "redconda", "api-mobile", "api-web", "api-partners"]
+work_repos = ["ios", "android-listeners", "system", "shibboleth", "redconda", "api-mobile", "api-web", "api-partners", "ios-release", "ios-store-metadata"]
 for repo_name in work_repos
     repo = Repository.new(repo_name, "git@github.com:soundcloud/#{repo_name}.git", "/Users/andreacipriani/code/soundcloud")
     repo.clone
