@@ -41,6 +41,7 @@ brew 'node'
 brew 'ranger'
 brew 'the_silver_searcher'
 brew 'jenv'
+brew 'trash'
 
 cask 'adium'
 cask 'vlc'
