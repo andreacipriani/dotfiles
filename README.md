@@ -35,10 +35,12 @@ There's a few special files in the hierarchy.
 - `script/brew-install`
 - `script/install`
 - `/bin/dot`
+- ruby git/clone-repos.rb
 
 ## Manual steps
 
-- Load iterm colors ![iterm colors](documentation/img/iterm-load-colors.png) the theme is in `iterm/one-dark996.itermcolors`
+![iterm colors](documentation/img/iterm-load-colors.png)
+- Load iterm colors the theme is in `iterm/one-dark996.itermcolors`
 - Load iterm config: On `Profiles` press `Other Actions` and `Import JSON Profiles`, select `iterm/iterm_config.json`
 
 ## Things to backup
