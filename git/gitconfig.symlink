@@ -56,3 +56,5 @@
 	tool = opendiff
 [diff]
 	tool = opendiff
+[commit]
+	template = /Users/andreacipriani/.stCommitMsg
