@@ -28,7 +28,7 @@ class Repository
 end
 
 ### Work repos
-work_repos = ["ios", "android-listeners", "system", "shibboleth", "redconda", "api-mobile", "api-web", "api-partners", "ios-release", "ios-store-metadata"]
+work_repos = ["ios", "android-listeners", "system", "shibboleth", "redconda", "api-mobile", "api-web", "api-partners", "ios-release", "ios-store-metadata", "eng-doc"]
 for repo_name in work_repos
     repo = Repository.new(repo_name, "git@github.com:soundcloud/#{repo_name}.git", "/Users/andreacipriani/code/soundcloud")
     repo.clone
