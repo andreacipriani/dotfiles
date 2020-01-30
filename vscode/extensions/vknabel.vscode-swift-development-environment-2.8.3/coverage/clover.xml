@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1567954665928" clover="3.2.0">
+  <project timestamp="1567954665928" name="All files">
+    <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="10" elements="23" coveredelements="23" complexity="0" loc="13" ncloc="13" packages="1" files="1" classes="1"/>
+    <file name="package-helpers.ts" path="/Users/vknabel/Developer/vknabel/vscode-swift-development-environment/src/server/packages/package-helpers.ts">
+      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="10"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="8" count="3" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="20" count="8" type="stmt"/>
+      <line num="21" count="7" type="stmt"/>
+      <line num="23" count="8" type="stmt"/>
+      <line num="24" count="8" type="stmt"/>
+      <line num="27" count="7" type="stmt"/>
+      <line num="32" count="3" type="stmt"/>
+      <line num="34" count="2" type="stmt"/>
+      <line num="38" count="3" type="stmt"/>
+    </file>
+  </project>
+</coverage>

@@ -1,0 +1,287 @@
+{
+	"name": "vscode-swift-development-environment",
+	"displayName": "Maintained Swift Development Environment",
+	"description": "New home of Swift Development Environment for VS Code",
+	"author": {
+		"name": "Valentin Knabel",
+		"email": "dev@vknabel.com",
+		"url": "https://github.com/vknabel"
+	},
+	"license": "Apache-2.0",
+	"version": "2.8.3",
+	"publisher": "vknabel",
+	"icon": "icons/icon.png",
+	"galleryBanner": {
+		"color": "#FC823F",
+		"theme": "light"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vknabel/vscode-swift-development-environment"
+	},
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"keywords": [
+		"swift",
+		"sde",
+		"linux",
+		"lldb",
+		"development"
+	],
+	"preview": false,
+	"activationEvents": [
+		"onLanguage:swift",
+		"workspaceContains:**/*swift",
+		"onCommand:sde.commands.buildPackage"
+	],
+	"main": "./out/src/clientMain",
+	"contributes": {
+		"commands": [
+			{
+				"command": "sde.commands.buildPackage",
+				"title": "Build Package",
+				"category": "SDE"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "sde.commands.buildPackage",
+				"key": "alt+b",
+				"mac": "alt+b"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Swift Development Environment Configuration",
+			"properties": {
+				"sourcekit-lsp.serverPath": {
+					"type": "string",
+					"description": "The path of the sourcekit-lsp executable"
+				},
+				"sourcekit-lsp.toolchainPath": {
+					"type": "string",
+					"description": "The path of the swift toolchain"
+				},
+				"swift.languageServerPath": {
+					"type": "string",
+					"default": "/usr/local/bin/langserver-swift",
+					"description": "The fully qualified path to the Swift Language Server executable."
+				},
+				"swift.path.sourcekite": {
+					"type": "string",
+					"description": "The fully path to the sourcekite(SDE's LS backend)."
+				},
+				"swift.path.sourcekiteDockerMode": {
+					"type": "boolean",
+					"default": false,
+					"description": "(Experimental)Enable to run dedicated docker shell command. It is the responsibility of user to guarantee that the docker cmd 'docker run --rm -i jinmingjian/docker-sourcekite' works in your system."
+				},
+				"swift.path.swift_driver_bin": {
+					"type": "string",
+					"default": "/usr/bin/swift",
+					"description": "The fully path to the swift driver binary."
+				},
+				"swift.path.shell": {
+					"type": "string",
+					"default": "/bin/sh",
+					"description": "The fully path to the shell binary."
+				},
+				"sde.sourcekit.compilerOptions": {
+					"type": "array",
+					"description": "Optional compiler options like the target or search paths. Will only be used as default. `(debug|release).yaml` builds will override these settings.",
+					"default": [],
+					"items": {
+						"type": "string"
+					}
+				},
+				"swift.targets": {
+					"type": "array",
+					"description": "If SDE cannot reliably detect all targets, you can manually configure them.",
+					"default": [],
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string",
+								"required": true,
+								"description": "The module name of the target. Will be passed as -module-name."
+							},
+							"path": {
+								"type": "string",
+								"required": true,
+								"description": "The reference path."
+							},
+							"sources": {
+								"required": false,
+								"type": "array",
+								"description": "An array of globs to determine all sources within the current target.",
+								"default": [
+									"**/*.swift"
+								],
+								"items": {
+									"type": "string"
+								}
+							},
+							"compilerArguments": {
+								"type": "array",
+								"required": false,
+								"description": "Additional compiler arguments to be passed.",
+								"items": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"sde.enable": {
+					"type": "boolean",
+					"default": true,
+					"description": "Wether SDE shall be executed."
+				},
+				"sde.languageServerMode": {
+					"type": "string",
+					"default": "sourcekite",
+					"enum": [
+						"sourcekite",
+						"langserver",
+						"sourcekit-lsp"
+					],
+					"description": "Decides which language server should be used. `sourcekite` is the default LSP for SDE, `sourcekit-lsp` is Apple's official one and `langserver` is RLovelett's Langserver."
+				},
+				"sde.enableTracing.client": {
+					"type": "boolean",
+					"default": false,
+					"description": "Enable tracing output for SDE client"
+				},
+				"sde.enableTracing.LSPServer": {
+					"type": "boolean",
+					"default": false,
+					"description": "Enable tracing output for SDE LS server"
+				},
+				"sde.buildOnSave": {
+					"type": "boolean",
+					"default": true,
+					"description": "Indicates wether SDE shall build the project on save."
+				},
+				"sde.swiftBuildingParams": {
+					"type": "array",
+					"description": "The params that shall be passed to the swift command.",
+					"default": [
+						"build"
+					],
+					"items": {
+						"type": "string"
+					}
+				},
+				"swift.diagnosis.max_num_problems": {
+					"type": "number",
+					"default": 100,
+					"description": "Controls the maximum number of problems produced by the server. NOET: Not used now."
+				}
+			}
+		},
+		"languages": [
+			{
+				"id": "swift",
+				"extensions": [
+					".swift"
+				],
+				"aliases": [
+					"Swift"
+				],
+				"firstLine": "^#!/.*\\bswift[0-9.-]*\\b"
+			}
+		],
+		"breakpoints": [
+			{
+				"language": "swift"
+			}
+		],
+		"debuggers": [
+			{
+				"type": "swift-debug",
+				"label": "Swift Debug (Deprecated)",
+				"program": "./out/src/debug/debugs.js",
+				"runtime": "node",
+				"configurationAttributes": {
+					"launch": {
+						"required": [
+							"program"
+						],
+						"properties": {
+							"program": {
+								"type": "string",
+								"description": "Absolute path to the program being debugged",
+								"default": "${workspaceRoot}/.build/debug/path-to-program-debugged"
+							}
+						}
+					}
+				}
+			}
+		],
+		"taskDefinitions": [
+			{
+				"type": "swift",
+				"properties": {}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run build",
+		"build": "npm run prepare-out && npm run peg1 && npm run peg2 && npm run copy-parser-dts && npm run compile",
+		"compile": "tsc -p ./",
+		"prepare-out": "mkdir -p out/src/debug/lldbmi",
+		"peg1": "pegjs -o out/src/debug/lldbmi/mi_output_parser.js src/debug/lldbmi/mi_output_grammar.pegjs",
+		"peg2": "pegjs -o out/src/debug/lldbmi/raw_command_output_parser.js src/debug/lldbmi/raw_command_output_parser.pegjs",
+		"copy-parser-dts": "cp src/debug/lldbmi/mi_output_parser.d.ts out/src/debug/lldbmi/mi_output_parser.d.ts",
+		"format": "prettier CHANGELOG.md README.md src/*.ts src/server/**/*.ts tsconfig.json --write",
+		"test": "jest"
+	},
+	"devDependencies": {
+		"@types/bunyan": "^1.8.4",
+		"@types/glob": "^5.0.35",
+		"@types/jest": "^24.0.18",
+		"@types/js-yaml": "^3.11.1",
+		"@types/node": "^12.7.4",
+		"@types/vscode": "1.30.0",
+		"@types/xml-js": "^1.0.0",
+		"jest": "^24.9.0",
+		"pegjs": "^0.10.0",
+		"prettier": "^1.18.2",
+		"ts-jest": "^24.0.2",
+		"typescript": "^3.6.2"
+	},
+	"dependencies": {
+		"bunyan": "^1.8.5",
+		"fs-promise": "^1.0.0",
+		"glob": "^7.1.4",
+		"js-yaml": "^3.13.1",
+		"vscode-debugadapter": "^1.25.0",
+		"vscode-debugprotocol": "^1.15.0",
+		"vscode-languageclient": "^5.2.1",
+		"vscode-languageserver": "^5.2.1",
+		"xml-js": "^1.6.11"
+	},
+	"jest": {
+		"transform": {
+			"^.+\\.tsx?$": "ts-jest"
+		},
+		"testMatch": [
+			"**/*.spec.ts"
+		],
+		"moduleFileExtensions": [
+			"ts",
+			"js"
+		],
+		"collectCoverage": true
+	},
+	"__metadata": {
+		"id": "22ab4ecd-a32e-45be-95dc-8fceaa3f9045",
+		"publisherId": "47e91703-1c94-49d7-a7ec-7c3734049a39",
+		"publisherDisplayName": "vknabel"
+	}
+}

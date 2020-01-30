@@ -1,0 +1,49 @@
+{
+	"name": "reindent-on-save",
+	"displayName": "Reindent on Save",
+	"description": "Reindent your files on save.",
+	"version": "1.3.0",
+	"publisher": "adadevelopersacademy",
+	"homepage": "https://github.com/Ada-Developers-Academy/vscode-reindent-on-save",
+	"repository": {
+		"url": "https://github.com/Ada-Developers-Academy/vscode-reindent-on-save"
+	},
+	"engines": {
+		"vscode": "^1.35.0"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"activationEvents": [
+		"onFileSystem:file"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"configurationDefaults": {
+			"[ruby]": {
+				"editor.formatOnSave": true
+			},
+			"[json]": {
+				"editor.formatOnSave": true,
+				"editor.defaultFormatter": "adadevelopersacademy.reindent-on-save"
+			},
+			"[jsonc]": {
+				"editor.formatOnSave": true,
+				"editor.defaultFormatter": "adadevelopersacademy.reindent-on-save"
+			}
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install && tsc"
+	},
+	"devDependencies": {
+		"@types/node": "*",
+		"vscode": "1.1.35",
+		"typescript": "2.0.6"
+	},
+	"__metadata": {
+		"id": "8057635a-9628-4c41-bbc7-eb180a721f07",
+		"publisherId": "c2f3807b-0ec0-46e0-81ab-25c3d0c768ae",
+		"publisherDisplayName": "Ada Developers Academy"
+	}
+}
