@@ -48,4 +48,6 @@ There's a few special files in the hierarchy.
 - Xcode UserData folder
 - Alfred preferences
 - iTerm preferences
-- VSCode extensions - *TODO*: automate it (~/.vscode/extensions)
+- VSCode: 
+  - extensions - *TODO*: automate it (~/.vscode/extensions)
+  - settings: synced using [Settings sync extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) ->  https://gist.github.com/andreacipriani/1ba00e8f9773857f46eae2845f8e9ac8
