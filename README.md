@@ -48,3 +48,4 @@ There's a few special files in the hierarchy.
 - Xcode UserData folder
 - Alfred preferences
 - iTerm preferences
+- Code plugins
